@@ -1,0 +1,8 @@
+name: Letters Menu
+description: Display letters menu.
+type: particle
+icon: fa-label
+
+configuration:
+  caching:
+    type: static

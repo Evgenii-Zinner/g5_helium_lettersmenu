@@ -1,0 +1,13 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    {% set cyrillic_letters = ['#', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'] %}
+
+    <div class="{{ particle.class|e }}">
+        {% for letter in cyrillic_letters %}
+            <a target="{{ particle.target }}" href="{{ base_url }}/glossary/{{ letter|lower|url_encode }}" title="{{ letter }}" style="margin-right: 10px;">{{ letter }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
